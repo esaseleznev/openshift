@@ -7,4 +7,4 @@ COPY *.jar /deployments/app.jar
 
 ENV JAVA_OPTS="$JAVA_OPTS -Xms500m -Xmx1024m"
 
-ENTRYPOINT ["sh", "-c", "java $JAVA_OPTS -jar /deployments/app.jar" ]
+ENTRYPOINT ["sh", "-c", "java -cp *.jar $JAVA_OPTS -jar /deployments/app.jar" ]
